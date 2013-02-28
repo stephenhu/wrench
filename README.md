@@ -1,4 +1,5 @@
 wrench
 ======
 
-tool for web development
+tool for ruby web development
+
