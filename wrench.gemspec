@@ -3,7 +3,7 @@ require File.expand_path('../lib/wrench/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["stephenhu"]
-  gem.email         = ["hus@vmware.com"]
+  gem.email         = ["epynonymous@outlook.com"]
   gem.license       = "MIT"
   gem.description   = %q{tool for ruby web development}
   gem.summary       = %q{command line tool for ruby web development}
@@ -17,3 +17,4 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Wrench::VERSION
 end
+
