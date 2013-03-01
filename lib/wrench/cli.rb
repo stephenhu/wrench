@@ -44,7 +44,10 @@ module Wrench
           end
 
           unless File.directory?("#{name}/#{dir}")
+
             FileUtils.mkdir_p("#{name}/#{dir}")
+            puts "  created directory #{name}/#{dir}".green
+
           end
 
         end
@@ -53,25 +56,28 @@ module Wrench
 
       def create_files(name)
 
-        project      = name
         module_name  = name.slice(0,1).capitalize + name.slice(1..-1)
 
         @config[FILES].each do |f|
 
           e = ERB.new( File.read( File.join( File.dirname(__FILE__),
-            "templates", f["template"] ) ) )
+            TEMPLATES, f[TEMPLATE] ) ) )
 
-          if f["template"].include?(".")
-            spec = name + "/"
-          else
-            spec = "#{name}/" + f["destination"].sub( "@", name ) + "/"
+          spec = "#{name}/"
+
+          unless f[DESTINATION].include?(".")
+            spec = spec + f[DESTINATION].sub( "@", name ) + "/"
           end
 
-          filename = f["template"].sub( ".erb", "" )
+          filename = f[TEMPLATE].sub( ".erb", "" )
 
-          puts spec + filename
+          if filename == MAINRB
+            filename = "#{name}.rb"
+          end
+
+          puts "  created file #{spec + filename}".green
+
           n = File.open( spec + filename, "w" )
-
           n.write(e.result(binding))
           n.close
 

@@ -14,7 +14,7 @@ directories:
   - lib/views
   - lib/@
   - spec
-xfiles:
+files:
   - template: Gemfile.erb
     destination: . 
   - template: Rakefile.erb

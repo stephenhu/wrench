@@ -11,7 +11,11 @@ module Wrench
   ASSETS        = "assets"
   NAME          = "name"
   DIRECTORIES   = "directories"
-  FILES         = "xfiles"
+  FILES         = "files"
+  DESTINATION   = "destination"
+  TEMPLATE      = "template"
+  TEMPLATES     = "templates"
+  MAINRB        = "main.rb"
 
 end
 
