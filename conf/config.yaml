@@ -1,0 +1,26 @@
+assets:
+  - name: boostrap
+    url: http://twitter.github.com/bootstrap/assets/bootstrap.zip
+  - name: jqueryui
+    url: http://github.com/jquery/jqueryui/downloads/
+directories:
+  - conf
+  - docs
+  - lib
+  - lib/public
+  - lib/public/css
+  - lib/public/img
+  - lib/public/js
+  - lib/views
+  - lib/@
+  - spec
+xfiles:
+  - template: Gemfile.erb
+    destination: . 
+  - template: Rakefile.erb
+    destination: .
+  - template: version.rb.erb
+    destination: lib/@
+  - template: main.rb.erb
+    destination: lib
+
