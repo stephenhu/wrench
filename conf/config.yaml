@@ -1,8 +1,8 @@
 assets:
-  - name: boostrap
+  - name: bootstrap
     url: http://twitter.github.com/bootstrap/assets/bootstrap.zip
   - name: jqueryui
-    url: http://github.com/jquery/jqueryui/downloads/
+    url: https://github.com/jquery/jquery-ui/archive/master.zip
 directories:
   - conf
   - docs

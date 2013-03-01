@@ -1,7 +1,10 @@
 require "colorize"
 require "erb"
+require "open3"
+require "open-uri"
 require "thor"
 require "yaml"
+require "zip/zip"
 
 require File.join( File.dirname(__FILE__), "wrench", "cli" )
 require File.join( File.dirname(__FILE__), "wrench", "version" )

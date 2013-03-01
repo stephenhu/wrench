@@ -10,23 +10,28 @@ module Wrench
 
     end
 
-    desc( "create NAME", "create project skeleton" )
-    def create(name)
+    desc( "up NAME", "create project skeleton" )
+    def up(name)
 
       create_directories(name)
       create_files(name)
 
     end
 
-    desc( "download ASSET", "download asset" )
-    def download(asset)
+    desc( "down ASSET", "download asset" )
+    def down(asset)
+
+      sel = @config[ASSETS].find {|a| a["name"] == asset }
+
+      download(sel["url"]) unless sel.nil?
+
     end
 
     desc( "list", "list all assets" )
     def list
 
       @config[ASSETS].each do |a|
-        puts "  * #{a[NAME]}"
+        puts "  + #{a[NAME]}"
       end
 
     end
@@ -80,6 +85,24 @@ module Wrench
           n = File.open( spec + filename, "w" )
           n.write(e.result(binding))
           n.close
+
+        end
+
+      end
+
+      def download(url)
+
+        bin = open(url)
+
+        Zip::ZipFile.open(bin.path) do |z|
+
+          z.each do |f|
+
+            path = File.join( ".", f.name )
+            FileUtils.mkdir_p(File.dirname(path))
+            z.extract( f, path ) unless File.exist?(path)
+
+          end
 
         end
 
