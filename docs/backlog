@@ -1,3 +1,6 @@
-- jquery ui
-- optional flag for gems
+open:
+- provide a local config file in addition to the wrench config file
+- provide a local template repository and template parameters
 
+closed:
+- jquery ui
