@@ -16,7 +16,7 @@ a tool for ruby web development
 * thor
 * zip
 
-* wrench has been tested against ruby 1.9.2-p290*
+*wrench has been tested against ruby 1.9.2-p290*
 
 ## installation
 
