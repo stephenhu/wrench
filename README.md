@@ -16,12 +16,14 @@ a tool for ruby web development
 * thor
 * zip
 
+* wrench has been tested against ruby 1.9.2-p290*
+
 ## installation
 
 ### gem package
 
 1.  install gem from rubygems
-```gem install wrench-0.0.1.gem```
+```gem install wrench-0.0.2.gem```
 
 ### from source
 
@@ -32,8 +34,11 @@ a tool for ruby web development
 3.  build the gem
 ```gem build wrench.gemspec # from the wrench directory```
 4.  install the local gem
-```gem install wrench-0.0.1.gem```
+```gem install wrench-0.0.2.gem```
 
+## testing
+
+* wrench has been tested against ruby 1.9.2-p290
 ## faq
 
 1.  how do i customize wrench?
