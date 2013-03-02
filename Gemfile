@@ -5,5 +5,5 @@ gemspec
 
 gem "colorize"
 gem "thor"
-gem "zip"
+gem "rubyzip"
 

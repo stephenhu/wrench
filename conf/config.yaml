@@ -3,6 +3,8 @@ assets:
     url: http://twitter.github.com/bootstrap/assets/bootstrap.zip
   - name: jqueryui
     url: https://github.com/jquery/jquery-ui/archive/master.zip
+  - name: glyphicons
+    url: http://glyphicons.com/files/glyphicons_free.zip
 directories:
   - conf
   - docs

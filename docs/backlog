@@ -1,6 +1,8 @@
-open:
+todo:
 - provide a local config file in addition to the wrench config file
 - provide a local template repository and template parameters
+- bz2, gz support
+- support for things like prettify which has a dynamic link
 
 closed:
 - jquery ui
