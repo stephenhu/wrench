@@ -4,7 +4,7 @@ a tool for ruby web development
 
 ## features
 
-* create skeleton repository for development of ruby web apps, akin to rails
+* create skeleton app for ruby web development
 * download assets such as bootstrap, jqueryui, glyphicons
 * add new assets
 * extensible templates
