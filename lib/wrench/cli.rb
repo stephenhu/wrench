@@ -36,6 +36,13 @@ module Wrench
 
     end
 
+    desc( "test", "test" )
+    def test
+
+      resource_ext("https://raw.github.com/douglascrockford/JSON-js/master/json2.js")
+
+    end
+
     no_tasks do
 
       def create_directories(name)
@@ -92,6 +99,36 @@ module Wrench
 
       def download(url)
 
+        ext = resource_ext(url)
+
+        if ext == ".zip"
+          download_binary(url)
+        elsif ext == ".js"
+          download_ascii(url)
+        else
+          puts "Unsupported resource type".red
+        end
+
+      end
+
+      def download_ascii(url)
+
+        ascii = open(url)
+
+        filename = File.basename(url)
+
+        unless File.exists?("./#{filename}")
+
+          f = File.open( filename, "w" )
+          f.write(ascii.read)
+          f.close
+
+        end
+
+      end
+
+      def download_binary(url)
+
         bin = open(url)
 
         Zip::ZipFile.open(bin.path) do |z|
@@ -105,6 +142,12 @@ module Wrench
           end
 
         end
+
+      end
+
+      def resource_ext(url)
+
+        return File.extname(url)
 
       end
 

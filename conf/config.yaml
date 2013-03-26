@@ -5,6 +5,8 @@ assets:
     url: https://github.com/jquery/jquery-ui/archive/master.zip
   - name: glyphicons
     url: http://glyphicons.com/files/glyphicons_free.zip
+  - name: json2
+    url: https://raw.github.com/douglascrockford/JSON-js/master/json2.js
 directories:
   - conf
   - docs
