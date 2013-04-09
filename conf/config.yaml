@@ -7,6 +7,8 @@ assets:
     url: http://glyphicons.com/files/glyphicons_free.zip
   - name: json2
     url: https://raw.github.com/douglascrockford/JSON-js/master/json2.js
+  - name: twitter-text-js
+    url: https://raw.github.com/twitter/twitter-text-js/master/twitter-text.js
 directories:
   - conf
   - docs
