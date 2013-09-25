@@ -6,7 +6,7 @@ module Wrench
 
       super
       @config = YAML.load_file( File.join( File.dirname(__FILE__),
-        "../../conf/config.yaml" ) )
+        "../../config/config.yaml" ) )
 
     end
 
