@@ -9,6 +9,8 @@ assets:
     url: https://raw.github.com/douglascrockford/JSON-js/master/json2.js
   - name: twitter-text-js
     url: https://raw.github.com/twitter/twitter-text-js/master/twitter-text.js
+  - name: jquery-themes
+    url: http://jqueryui.com/resources/download/jquery-ui-themes-1.10.3.zip
 directories:
   - conf
   - docs
