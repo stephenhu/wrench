@@ -1,6 +1,6 @@
 assets:
   - name: bootstrap
-    url: http://getbootstrap.com/2.3.2/assets/bootstrap.zip
+    url: https://github.com/twbs/bootstrap/archive/v3.0.0.zip
   - name: jqueryui
     url: https://github.com/jquery/jquery-ui/archive/master.zip
   - name: glyphicons
